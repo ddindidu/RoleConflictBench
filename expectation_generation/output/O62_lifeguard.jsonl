@@ -1,0 +1,9 @@
+{"expectation_id": "O62_A", "expectation": "Monitor swimmers continuously", "obligation": 1, "situation": "They notice a few swimmers occasionally drifting toward deeper water but no immediate danger arises."}
+{"expectation_id": "O62_A", "expectation": "Monitor swimmers continuously", "obligation": 2, "situation": "They see a swimmer struggling near the middle of the pool and need to stay vigilant to respond quickly."}
+{"expectation_id": "O62_A", "expectation": "Monitor swimmers continuously", "obligation": 3, "situation": "They are overseeing a crowded beach during high tide, where one moment of inattention could put multiple swimmers at serious risk."}
+{"expectation_id": "O62_B", "expectation": "Maintain equipment and facilities", "obligation": 1, "situation": "They notice a few pool chairs are slightly misaligned but still usable."}
+{"expectation_id": "O62_B", "expectation": "Maintain equipment and facilities", "obligation": 2, "situation": "They find a broken lane rope that could disrupt swim lessons if not fixed soon."}
+{"expectation_id": "O62_B", "expectation": "Maintain equipment and facilities", "obligation": 3, "situation": "They identify a malfunctioning pool filtration system that could endanger swimmers’ safety if not repaired immediately."}
+{"expectation_id": "O62_C", "expectation": "Enforce safety rules", "obligation": 1, "situation": "They notice swimmers occasionally entering the shallow area without supervision."}
+{"expectation_id": "O62_C", "expectation": "Enforce safety rules", "obligation": 2, "situation": "They see a group of teenagers ignoring the no-diving signs near the pool edge."}
+{"expectation_id": "O62_C", "expectation": "Enforce safety rules", "obligation": 3, "situation": "They spot a child struggling in the deep end where swimming is restricted."}

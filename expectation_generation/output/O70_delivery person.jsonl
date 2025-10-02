@@ -1,0 +1,9 @@
+{"expectation_id": "O70_A", "expectation": "Deliver packages on time and to the correct address", "obligation": 1, "situation": "A package arrives slightly later than expected, but still within the same day"}
+{"expectation_id": "O70_A", "expectation": "Deliver packages on time and to the correct address", "obligation": 2, "situation": "A customer urgently needs their delivery by the promised time window, such as groceries for dinner"}
+{"expectation_id": "O70_A", "expectation": "Deliver packages on time and to the correct address", "obligation": 3, "situation": "A medical supply delivery must reach a hospital department on schedule to ensure patient care"}
+{"expectation_id": "O70_B", "expectation": "Secure packages and confirm successful delivery", "obligation": 1, "situation": "Leaving a package safely at the doorstep when no one is home"}
+{"expectation_id": "O70_B", "expectation": "Secure packages and confirm successful delivery", "obligation": 2, "situation": "Requesting a signature upon delivery for moderately valuable items"}
+{"expectation_id": "O70_B", "expectation": "Secure packages and confirm successful delivery", "obligation": 3, "situation": "Hand-delivering a high-value or sensitive package directly to the recipient and verifying their identity"}
+{"expectation_id": "O70_C", "expectation": "Communicate politely and professionally with customers", "obligation": 1, "situation": "Meeting the customer for handing over a package"}
+{"expectation_id": "O70_C", "expectation": "Communicate politely and professionally with customers", "obligation": 2, "situation": "The customer asks about the delivery status"}
+{"expectation_id": "O70_C", "expectation": "Communicate politely and professionally with customers", "obligation": 3, "situation": "The customer asks about the delivery status, while a delivery issue arises, such as a delayed or misplaced package"}

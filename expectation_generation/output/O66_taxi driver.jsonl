@@ -1,0 +1,9 @@
+{"expectation_id": "O66_A", "expectation": "Provide safe, timely transportation", "obligation": 1, "situation": "The passenger is heading to a casual meeting with plenty of time"}
+{"expectation_id": "O66_A", "expectation": "Provide safe, timely transportation", "obligation": 2, "situation": "The passenger’s train leaves soon and the station is across town"}
+{"expectation_id": "O66_A", "expectation": "Provide safe, timely transportation", "obligation": 3, "situation": "A winter storm is slowing traffic while the passenger must catch an international flight"}
+{"expectation_id": "O66_B", "expectation": "Follow traffic laws and drive defensively", "obligation": 1, "situation": "Roads are dry with light traffic and normal speed limits"}
+{"expectation_id": "O66_B", "expectation": "Follow traffic laws and drive defensively", "obligation": 2, "situation": "Steady rain and frequent lane changes from nearby cars raise the risk of sudden stops"}
+{"expectation_id": "O66_B", "expectation": "Follow traffic laws and drive defensively", "obligation": 3, "situation": "A school zone with children near the curb appears just as a construction detour narrows the lanes"}
+{"expectation_id": "O66_C", "expectation": "Deliver professional service", "obligation": 1, "situation": "The taxi driver ensures the cab remains neat and hygienic."}
+{"expectation_id": "O66_C", "expectation": "Deliver professional service", "obligation": 2, "situation": "Two travelers with several suitcases ask for help loading and plan to split the fare"}
+{"expectation_id": "O66_C", "expectation": "Deliver professional service", "obligation": 3, "situation": "A passenger who booked through the app is waiting and urgently pressing for a quicker arrival."}

@@ -1,0 +1,9 @@
+{"expectation_id": "O64_A", "expectation": "Process transactions accurately", "obligation": 1, "situation": "They scan items during a slow afternoon with a few customers in line."}
+{"expectation_id": "O64_A", "expectation": "Process transactions accurately", "obligation": 2, "situation": "They handle a busy checkout with a long queue during peak hours."}
+{"expectation_id": "O64_A", "expectation": "Process transactions accurately", "obligation": 3, "situation": "They manage high-value transactions at the end of a shift, where mistakes could cause significant financial discrepancies."}
+{"expectation_id": "O64_B", "expectation": "Follow store policies and procedures", "obligation": 1, "situation": "They notice a small discrepancy in the register but it doesn’t affect the total sales for the day."}
+{"expectation_id": "O64_B", "expectation": "Follow store policies and procedures", "obligation": 2, "situation": "They encounter a customer trying to return an item without a receipt and need to apply the store’s return policy."}
+{"expectation_id": "O64_B", "expectation": "Follow store policies and procedures", "obligation": 3, "situation": "They must follow strict procedures for a large cash deposit at the end of a busy shift to comply with corporate auditing rules."}
+{"expectation_id": "O64_C", "expectation": "Provide friendly customer service", "obligation": 1, "situation": "They greet a few customers politely while scanning items at a quiet store."}
+{"expectation_id": "O64_C", "expectation": "Provide friendly customer service", "obligation": 2, "situation": "They interact warmly with a long line of shoppers during a busy lunch hour."}
+{"expectation_id": "O64_C", "expectation": "Provide friendly customer service", "obligation": 3, "situation": "They remain cheerful and patient while handling an upset customer during a peak holiday rush."}

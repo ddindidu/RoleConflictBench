@@ -1,0 +1,9 @@
+{"expectation_id": "O19_A", "expectation": "Dispense medications accurately", "obligation": 1, "situation": "They check a routine prescription for a common cold and confirm the medication matches the label."}
+{"expectation_id": "O19_A", "expectation": "Dispense medications accurately", "obligation": 2, "situation": "They prepare a prescription for a patient with multiple chronic conditions who relies on the correct combination of medications."}
+{"expectation_id": "O19_A", "expectation": "Dispense medications accurately", "obligation": 3, "situation": "They fill a high-risk chemotherapy prescription where even a small error could have severe consequences for the patient."}
+{"expectation_id": "O19_B", "expectation": "Provide patient counseling", "obligation": 1, "situation": "They briefly answer a patient’s simple question about over-the-counter pain relief."}
+{"expectation_id": "O19_B", "expectation": "Provide patient counseling", "obligation": 2, "situation": "They guide a patient on proper usage and potential side effects of a new prescription medication."}
+{"expectation_id": "O19_B", "expectation": "Provide patient counseling", "obligation": 3, "situation": "They conduct an in-depth consultation with a patient taking multiple high-risk medications to prevent dangerous interactions."}
+{"expectation_id": "O19_C", "expectation": "Stay updated professionally", "obligation": 1, "situation": "They skim a recent pharmacy newsletter while on break to see what new drugs have been released."}
+{"expectation_id": "O19_C", "expectation": "Stay updated professionally", "obligation": 2, "situation": "They attend a local workshop on updated prescription guidelines to ensure proper patient counseling."}
+{"expectation_id": "O19_C", "expectation": "Stay updated professionally", "obligation": 3, "situation": "They participate in a national continuing education program to maintain licensure and expertise in the latest treatments."}

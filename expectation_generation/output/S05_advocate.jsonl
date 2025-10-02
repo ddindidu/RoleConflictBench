@@ -1,0 +1,9 @@
+{"expectation_id": "S05_A", "expectation": "Provide clients with clear and accurate legal advice", "obligation": 1, "situation": "They give general explanations about the client’s situation during casual consultations"}
+{"expectation_id": "S05_A", "expectation": "Provide clients with clear and accurate legal advice", "obligation": 2, "situation": "The client’s case grows more complex and requires detailed guidance"}
+{"expectation_id": "S05_A", "expectation": "Provide clients with clear and accurate legal advice", "obligation": 3, "situation": "The client is facing an urgent legal issue and relies on precise advice for immediate action"}
+{"expectation_id": "S05_B", "expectation": "Represent clients effectively in legal proceedings", "obligation": 1, "situation": "They appear at a minor hearing where the stakes are relatively low"}
+{"expectation_id": "S05_B", "expectation": "Represent clients effectively in legal proceedings", "obligation": 2, "situation": "The client’s case involves important disputes that require careful representation"}
+{"expectation_id": "S05_B", "expectation": "Represent clients effectively in legal proceedings", "obligation": 3, "situation": "The client’s future is heavily dependent on the outcome of a critical trial"}
+{"expectation_id": "S05_C", "expectation": "Attend meetings and court sessions punctually", "obligation": 1, "situation": "They are expected at routine meetings that occur frequently"}
+{"expectation_id": "S05_C", "expectation": "Attend meetings and court sessions punctually", "obligation": 2, "situation": "They need to be on time for a scheduled court session that impacts the client’s case"}
+{"expectation_id": "S05_C", "expectation": "Attend meetings and court sessions punctually", "obligation": 3, "situation": "Their timely presence is crucial at a high-stakes proceeding that could determine the case outcome"}

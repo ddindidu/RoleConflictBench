@@ -1,0 +1,9 @@
+{ "expectation_id": "R09_A", "expectation": "Teach children about Jewish traditions, values, and history", "obligation": 1, "situation": "A weekly study slot is planned, and lessons could be shifted without losing continuity."}
+{ "expectation_id": "R09_A", "expectation": "Teach children about Jewish traditions, values, and history", "obligation": 2, "situation": "An upcoming holiday is near, and the children still need to learn the related blessings."}
+{ "expectation_id": "R09_A", "expectation": "Teach children about Jewish traditions, values, and history", "obligation": 3, "situation": "The child's bar mitzvah is approaching, and they have not yet mastered the Torah portion."}
+{ "expectation_id": "R09_B", "expectation": "Observe kosher dietary laws in daily meals", "obligation": 1, "situation": "The pantry is stocked with kosher ingredients, and alternative snacks are readily available."}
+{ "expectation_id": "R09_B", "expectation": "Observe kosher dietary laws in daily meals", "obligation": 2, "situation": "While traveling, only a small vendor known to be kosher-certified is within reach for the next meal."}
+{ "expectation_id": "R09_B", "expectation": "Observe kosher dietary laws in daily meals", "obligation": 3, "situation": "At a communal event, the catered dishes lack certification and substituting food would be difficult."}
+{ "expectation_id": "R09_C", "expectation": "Attend synagogue services regularly", "obligation": 1, "situation": "A routine service is held, and attendance numbers are usually sufficient even if one person is absent."}
+{ "expectation_id": "R09_C", "expectation": "Attend synagogue services regularly", "obligation": 2, "situation": "They have been scheduled to chant a portion during the service."}
+{ "expectation_id": "R09_C", "expectation": "Attend synagogue services regularly", "obligation": 3, "situation": "A funeral prayer needs exactly one more participant to form the required quorum."}

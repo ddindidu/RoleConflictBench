@@ -1,0 +1,9 @@
+{ "expectation_id": "I02_A", "expectation": "Support partner emotionally", "obligation": 1, "situation": "The partner seems mildly stressed after a routine workday."}
+{ "expectation_id": "I02_A", "expectation": "Support partner emotionally", "obligation": 2, "situation": "The partner received disappointing feedback at work and is visibly upset."}
+{ "expectation_id": "I02_A", "expectation": "Support partner emotionally", "obligation": 3, "situation": "The partner is grieving the sudden loss of a close family member."}
+{ "expectation_id": "I02_B", "expectation": "Spend quality time together", "obligation": 1, "situation": "Both have several free evenings this week and can choose any for a date."}
+{ "expectation_id": "I02_B", "expectation": "Spend quality time together", "obligation": 2, "situation": "They share only one open evening before a busy travel week."}
+{ "expectation_id": "I02_B", "expectation": "Spend quality time together", "obligation": 3, "situation": "This is the last weekend before the partner relocates abroad for months."}
+{ "expectation_id": "I02_C", "expectation": "Resolve conflicts", "obligation": 1, "situation": "A minor misunderstanding about weekend plans just arose."}
+{ "expectation_id": "I02_C", "expectation": "Resolve conflicts", "obligation": 2, "situation": "They have argued repeatedly this week about finances."}
+{ "expectation_id": "I02_C", "expectation": "Resolve conflicts", "obligation": 3, "situation": "A heated dispute has escalated to the point where they are questioning staying together."}

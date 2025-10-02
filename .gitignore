@@ -1,3 +1,9 @@
+# private files
+keys_ours.py
+
+# data files
+evaluation/output/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

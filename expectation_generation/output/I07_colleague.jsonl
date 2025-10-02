@@ -1,0 +1,9 @@
+{ "expectation_id": "I07_A", "expectation": "Attend team meetings and participate", "obligation": 1, "situation": "The meeting is a routine catch-up that will be recorded for anyone who cannot make it."}
+{ "expectation_id": "I07_A", "expectation": "Attend team meetings and participate", "obligation": 2, "situation": "The meeting will cover key project updates that won’t be summarized elsewhere."}
+{ "expectation_id": "I07_A", "expectation": "Attend team meetings and participate", "obligation": 3, "situation": "The meeting is the final discussion before major decisions are locked in."}
+{ "expectation_id": "I07_B", "expectation": "Complete assigned tasks by the agreed deadlines", "obligation": 1, "situation": "The task has generous buffer time and others can proceed without it for a while."}
+{ "expectation_id": "I07_B", "expectation": "Complete assigned tasks by the agreed deadlines", "obligation": 2, "situation": "The task feeds directly into the next teammate’s work and delays would ripple."}
+{ "expectation_id": "I07_B", "expectation": "Complete assigned tasks by the agreed deadlines", "obligation": 3, "situation": "The task sits on the critical path for an external delivery promised to a client."}
+{ "expectation_id": "I07_C", "expectation": "Respond to emails and messages within a reasonable time frame", "obligation": 1, "situation": "The message is informational and the sender notes there is no immediate action required."}
+{ "expectation_id": "I07_C", "expectation": "Respond to emails and messages within a reasonable time frame", "obligation": 2, "situation": "The team awaits a clarification before progressing with a shared task."}
+{ "expectation_id": "I07_C", "expectation": "Respond to emails and messages within a reasonable time frame", "obligation": 3, "situation": "Leadership needs a prompt reply to confirm details for an external partner."}

@@ -1,0 +1,66 @@
+Domain,Gender,Status,Role,Code
+family,male,,grandfather,F01
+family,male,,father,F02
+family,male,,son,F03
+family,male,,brother,F04
+family,male,,husband,F05
+family,female,,grandmother,F08
+family,female,,mother,F09
+family,female,,daughter,F10
+family,female,,sister,F11
+family,female,,wife,F12
+family,neutral,,grandparent,F26
+family,neutral,,parent,F15
+family,neutral,,child,F17
+family,neutral,,sibling,F18
+family,neutral,,spouse,F16
+family,,in-law,step-parent,F23
+family,,in-law,step-sibling,F24
+family,,in-law,step-child,F25
+occupation,,high,air traffic controller,O34
+occupation,,high,police officer,O31
+occupation,,high,subway operator,O35
+occupation,,high,doctor,O16
+occupation,,high,pharmacist,O19
+occupation,,high,judge,O24
+occupation,,high,lawyer,O23
+occupation,,high,architect,O01
+occupation,,high,engineer,O02
+occupation,,high,accountant,O10
+occupation,,high,software developer,O12
+occupation,,high,scientist,O14
+occupation,,low,ambulance driver,O67
+occupation,,low,lifeguard,O62
+occupation,,low,nursing assistant,O48
+occupation,,low,housekeeping cleaner,O37
+occupation,,low,construction laborer,O39
+occupation,,low,carpenter,O40
+occupation,,low,machine repairer,O50
+occupation,,low,hairdresser,O56
+occupation,,low,telemarketer,O63
+occupation,,low,cashier,O64
+occupation,,low,taxi driver,O66
+occupation,,low,delivery person,O70
+society,,,volunteer,S01
+society,,,activist,S02
+society,,,citizen,S03
+society,,,voter,S04
+society,,,advocate,S05
+interpersonal,male,,boyfriend,I02
+interpersonal,female,,girlfriend,I03
+interpersonal,,,friend,I04
+interpersonal,,,mentor,I05
+interpersonal,,,mentee,I06
+interpersonal,,,colleague,I07
+interpersonal,,,acquaintance,I08
+interpersonal,,,neighbor,I09
+religion,,high,pastor,R01
+religion,male,high,priest,R02
+religion,female,high,nun,R03
+religion,,low,christian,R06
+religion,,high,imam,R04
+religion,,low,muslim,R08
+religion,,high,rabbi,R05
+religion,,low,jewish,R09
+religion,,low,buddhist,R07
+religion,,low,hindu,R10

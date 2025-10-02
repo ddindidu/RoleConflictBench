@@ -1,0 +1,9 @@
+{ "expectation_id": "O12_A", "expectation": "Write clean, maintainable, and efficient code", "obligation": 1, "situation": "They have a generous deadline and can refactor the module later"}
+{ "expectation_id": "O12_A", "expectation": "Write clean, maintainable, and efficient code", "obligation": 2, "situation": "The new feature is nearly ready but performance warnings appear in code reviews"}
+{ "expectation_id": "O12_A", "expectation": "Write clean, maintainable, and efficient code", "obligation": 3, "situation": "A critical service is slowing under load and traces point to their recently merged functions"}
+{ "expectation_id": "O12_B", "expectation": "Collaborate with other teams to define and design new features", "obligation": 1, "situation": "Product has scheduled a general brainstorming session next sprint where attendance is optional"}
+{ "expectation_id": "O12_B", "expectation": "Collaborate with other teams to define and design new features", "obligation": 2, "situation": "Design documents are due soon and other teams are waiting for their technical input"}
+{ "expectation_id": "O12_B", "expectation": "Collaborate with other teams to define and design new features", "obligation": 3, "situation": "The launch date was moved up and architects from multiple teams are blocked until they provide decisions"}
+{ "expectation_id": "O12_C", "expectation": "Fix bugs and troubleshoot issues reported by users or QA", "obligation": 1, "situation": "A minor UI glitch occasionally shows up but has an easy workaround"}
+{ "expectation_id": "O12_C", "expectation": "Fix bugs and troubleshoot issues reported by users or QA", "obligation": 2, "situation": "Several users report intermittent errors that disrupt normal usage"}
+{ "expectation_id": "O12_C", "expectation": "Fix bugs and troubleshoot issues reported by users or QA", "obligation": 3, "situation": "A production outage traces back to a defect in their code and customers cannot access the service"}

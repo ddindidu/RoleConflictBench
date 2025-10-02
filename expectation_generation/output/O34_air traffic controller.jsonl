@@ -1,0 +1,9 @@
+{ "expectation_id": "O34_A", "expectation": "Manage airspace congestion", "obligation": 1, "situation": "Pre-dawn traffic is sparse and holding patterns are empty."}
+{ "expectation_id": "O34_A", "expectation": "Manage airspace congestion", "obligation": 2, "situation": "A holiday travel surge fills the approach fixes with moderate holding delays."}
+{ "expectation_id": "O34_A", "expectation": "Manage airspace congestion", "obligation": 3, "situation": "A sudden route closure forces dozens of flights into tight holding stacks around the airport."}
+{ "expectation_id": "O34_B", "expectation": "Communicate with pilots to provide instructions and updates", "obligation": 1, "situation": "A cruising aircraft simply requests the routine altimeter setting."}
+{ "expectation_id": "O34_B", "expectation": "Communicate with pilots to provide instructions and updates", "obligation": 2, "situation": "Cloud tops are rising quickly, and several pilots await revised climb instructions."}
+{ "expectation_id": "O34_B", "expectation": "Communicate with pilots to provide instructions and updates", "obligation": 3, "situation": "A pilot declares low fuel on approach and needs immediate vectors to the nearest runway."}
+{ "expectation_id": "O34_C", "expectation": "Coordinate with other air traffic controllers to ensure smooth traffic flow", "obligation": 1, "situation": "One aircraft is about to cross into the neighboring sector on a normal route."}
+{ "expectation_id": "O34_C", "expectation": "Coordinate with other air traffic controllers to ensure smooth traffic flow", "obligation": 2, "situation": "Thunderstorm cells force multiple flights to reroute, increasing handoffs between sectors."}
+{ "expectation_id": "O34_C", "expectation": "Coordinate with other air traffic controllers to ensure smooth traffic flow", "obligation": 3, "situation": "An emergency diversion cuts across three sectors at once, requiring rapid multi-sector coordination."}

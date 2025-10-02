@@ -1,0 +1,9 @@
+{ "expectation_id": "F09_A", "expectation": "Attending children's school events and activities", "obligation": 1, "situation": "Children are about to finish school, and the mother should pick them up"}
+{ "expectation_id": "F09_A", "expectation": "Attending children's school events and activities", "obligation": 2, "situation": "An open class is scheduled at the school, and the mother should attend"}
+{ "expectation_id": "F09_A", "expectation": "Attending children's school events and activities", "obligation": 3, "situation": "The school reports that the child was caught bullying a classmate, and the mother needs to respond"}
+{ "expectation_id": "F09_B", "expectation": "Teaching children moral values and discipline", "obligation": 1, "situation": "At home, the child is learning daily manners, and the mother should provide guidance"}
+{ "expectation_id": "F09_B", "expectation": "Teaching children moral values and discipline", "obligation": 2, "situation": "The child is running around in a supermarket, and the mother needs to correct the behavior"}
+{ "expectation_id": "F09_B", "expectation": "Teaching children moral values and discipline", "obligation": 3, "situation": "The child is caught stealing snacks at a store, and the mother needs to handle the situation"}
+{ "expectation_id": "F09_C", "expectation": "Ensuring financial stability for the family", "obligation": 1, "situation": "The child has been promised a Nintendo, and the mother should purchase it"}
+{ "expectation_id": "F09_C", "expectation": "Ensuring financial stability for the family", "obligation": 2, "situation": "The family requires money for daily living expenses, and the mother needs to provide it"}
+{ "expectation_id": "F09_C", "expectation": "Ensuring financial stability for the family", "obligation": 3, "situation": "A home loan repayment is due in two months, and the mother needs to prepare for it"}

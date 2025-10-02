@@ -1,0 +1,9 @@
+{ "expectation_id": "I06_A", "expectation": "Complete any assignments or tasks given by the mentor.", "obligation": 1, "situation": "The mentor suggested some optional reading and the informal deadline is weeks away."}
+{ "expectation_id": "I06_A", "expectation": "Complete any assignments or tasks given by the mentor.", "obligation": 2, "situation": "The mentor assigned a code sample to be finished before the next meeting in three days."}
+{ "expectation_id": "I06_A", "expectation": "Complete any assignments or tasks given by the mentor.", "obligation": 3, "situation": "The mentor's task must be completed before upper management’s evaluation tomorrow."}
+{ "expectation_id": "I06_B", "expectation": "Communicate any challenges or concerns promptly to the mentor.", "obligation": 1, "situation": "The mentee has a small question about terminology that isn't blocking their work."}
+{ "expectation_id": "I06_B", "expectation": "Communicate any challenges or concerns promptly to the mentor.", "obligation": 2, "situation": "A technical hurdle is preventing the mentee from advancing on the current project."}
+{ "expectation_id": "I06_B", "expectation": "Communicate any challenges or concerns promptly to the mentor.", "obligation": 3, "situation": "A serious conflict with teammates is threatening the mentee’s deliverable timeline."}
+{ "expectation_id": "I06_C", "expectation": "Respect the mentor's time and availability.", "obligation": 1, "situation": "The mentor has set aside open office hours throughout the week."}
+{ "expectation_id": "I06_C", "expectation": "Respect the mentor's time and availability.", "obligation": 2, "situation": "The mentor arranged a short meeting in an otherwise packed day."}
+{ "expectation_id": "I06_C", "expectation": "Respect the mentor's time and availability.", "obligation": 3, "situation": "The mentor fit the session into the last hour before boarding a long flight."}
