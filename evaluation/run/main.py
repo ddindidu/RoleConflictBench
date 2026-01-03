@@ -65,7 +65,7 @@ def main(args, expectation_util=None, story_util=None):
         # check if the evaluation result already exists
         if evaluatee.exists(code1, code2, obligation1, obligation2, expectation1, expectation2):
             # skip if the evaluation result already exists
-            # print(f"Evaluation result for {code1} and {code2} already exists. Skipping...")
+            print(f"Evaluation result for {code1} - urgency {obligation1} and {code2} - urgency {obligation2} already exists. Skipping...")
             continue
 
         # shuffle the options

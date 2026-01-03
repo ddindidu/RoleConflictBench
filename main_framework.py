@@ -5,7 +5,6 @@ import random as rand
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from expectation_generation.run.main import main as expectation_main
 from story_generation.run.main import main as scenario_main
-from story_generation.output import concat as scenario_concat
 from evaluation.run.main import main as eval_main
 # import evaluation.run.utils as utils
 
@@ -67,8 +66,6 @@ if __name__ == "__main__":
     if args.generate_scenario:
         # Generate scenarios
         story_util = scenario_main(args, expectation_util)
-        # concatenate scenario outputs
-        scenario_concat.concat(args.benchmark_model)
 
     # Evaluate the model's decision
     if args.evaluate:
