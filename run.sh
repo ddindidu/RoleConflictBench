@@ -1,4 +1,4 @@
-# 예시
+# example command to run evaluation
 # !/bin/bash
 # for test
 python main_framework.py --evaluate --evaluatee_model gpt-4.1 --test
