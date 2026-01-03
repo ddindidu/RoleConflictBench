@@ -3,17 +3,17 @@ import pandas as pd
 import glob
 import os
 
+df_compare = None
 
-def concat(benchmark_model='gpt-4.1'):
-    model_name = benchmark_model
-
+models = ['gpt-4.1']
+for model_name in models:
     # Construct the path to the directory containing the .jsonl files
     json_dir = os.path.join(os.path.dirname(__file__), model_name)
     
     # Check if the directory exists
     if not os.path.exists(json_dir):
         print(f"Directory {json_dir} does not exist.")
-        return
+        continue
 
     # Get all .json files in the directory
     json_files = glob.glob(os.path.join(json_dir, '*', "*.json"))
@@ -25,6 +25,16 @@ def concat(benchmark_model='gpt-4.1'):
             data= json.load(file)
         
         df_temp = pd.DataFrame([data])
+
+        code1 = df_temp.loc[0, 'Code1']
+        code2 = df_temp.loc[0, 'Code2']
+        obg1 = df_temp.loc[0, 'Obligation1']
+        obg2 = df_temp.loc[0, 'Obligation2']
+        exp1 = df_temp.loc[0, 'Expectation_No1']
+        exp2 = df_temp.loc[0, 'Expectation_No2']
+
+        df_temp.loc[0, 'key'] = f"{code1}-{code2}_{obg1}-{obg2}_{exp1}-{exp2}"
+        
         concat_df = pd.concat([concat_df, df_temp], ignore_index=True) if 'concat_df' in locals() else df_temp
 
     # Save the concatenated DataFrame to a new .csv file
