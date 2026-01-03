@@ -2,12 +2,12 @@ import os
 import pandas as pd
 from tqdm import tqdm
 
-from ver3.attribution.role_attribution import Role
-from ver3.expectation_generation_triplet.run.expectation import Expectation
-from ver3.scenario_generation_triplet.run.scenario_generator import StoryGenerator
-from ver3.evaluation.run import qa
-from ver3.evaluation.run.evaluatee import Evaluatee
-from ver3.evaluation.run.utils import is_valid_answer, parse_response
+from attribution.role_attribution import Role
+from expectation_generation.run.expectation import Expectation
+from story_generation.run.story_generator import StoryGenerator
+from evaluation.run import qa
+from evaluation.run.evaluatee import Evaluatee
+from evaluation.run.utils import is_valid_answer, parse_response
 
 def main(args, expectation_util=None, story_util=None):
     role_dir = args.attribution_dir 

@@ -1,6 +1,6 @@
 import os, json, configparser
-from ver3.keys import get_key
-from ver3.evaluation.model import gpt, claude, gemini, qwen3, gpt_oss, qwen_openrouter, olmo_openrouter
+from keys import get_key
+from evaluation.model import gpt, claude, gemini, qwen3, gpt_oss, qwen_openrouter, olmo_openrouter
 
 class Evaluatee:
     def __init__(self, args): # expectation_util=None, story_util=None):
