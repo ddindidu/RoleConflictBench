@@ -1,10 +1,12 @@
 # RoleConflictBench
+[[paper](https://aclanthology.org/2026.findings-acl.1695.pdf)]
 
-### Concept Figure
+> **Do LLMs adhere to the objective constraints of the situation’s urgency, or do
+they default to learned preferences?**
 
 ![concept_figure](./concept_figure_situation.pdf)
 
-Conceptual illustration of RoleConflictBench. We generate distinct expectations for two competing social roles and synthesize them into a story depicting an individual's role conflict. Our benchmark is designed to evaluate how decisions change depending on the situation.
+We generate distinct expectations for two competing social roles and synthesize them into a story depicting an individual's role conflict. Our benchmark is designed to evaluate how decisions change depending on the situation.
 
 ### Method Overview
 
@@ -70,3 +72,30 @@ python main_framework.py --evaluate --evaluatee_model gpt-4.1
 ```
 
 Add `--test` to any command to run on a small subset for a quick sanity check. See `run.sh` for example evaluation commands, and `evaluation/model/*.cfg` for the list of supported evaluatee models (GPT, Claude, Gemini, Qwen, OLMo, gpt-oss, etc.).
+
+
+## Citation
+```
+@inproceedings{shin-etal-2026-roleconflictbench,
+    title = "{R}ole{C}onflict{B}ench: A Benchmark of Role Conflict Scenarios for Evaluating {LLM}s' Contextual Sensitivity",
+    author = "Shin, Jisu  and
+      Song, Hoyun  and
+      Oh, Juhyun  and
+      Ko, Changgeon  and
+      Kim, Eunsu  and
+      Jung, Chani  and
+      Oh, Alice",
+    booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {ACL} 2026",
+    month = jul,
+    year = "2026",
+    address = "San Diego, California, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.findings-acl.1695/",
+    doi = "10.18653/v1/2026.findings-acl.1695",
+    pages = "33931--33964",
+    ISBN = "979-8-89176-395-1",
+}
+```
+
+## Contact
+If you have any inquiries regarding the dataset or collaborations, please email me here: `jisu.shin@kaist.ac.kr`.
