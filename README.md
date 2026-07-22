@@ -14,7 +14,7 @@ We generate distinct expectations for two competing social roles and synthesize 
 
 RoleConflictBench is built in three stages:
 
-1. **Expectation generation** — for each social role, generate a set of expectations (what that role is obligated to do) and, for each expectation, concrete situations that invoke it at varying levels of obligation/urgency.
+1. **Expectation generation** — for each social role, generate a set of expectations (what that role is obligated to do) and, for each expectation, concrete situations that invoke it at varying levels of urgency.
 2. **Story generation** — pick two roles held by the same person, sample one expectation/situation from each, and synthesize a short first-person story depicting the resulting role conflict.
 3. **Evaluation** — present the story to a model (the "evaluatee") as a forced-choice question between the two roles and record its answer, reasoning, and the human value it invokes.
 
@@ -43,7 +43,7 @@ env.yaml                     Conda environment export
 - Story & Benchmark Dataset: `/benchmark/question.csv`
 
 ### `benchmark/question.csv` columns
-`Code1, Role1, Expectation_No1, Expectation1, Obligation1, Situation1, Code2, Role2, Expectation_No2, Expectation2, Obligation2, Situation2, Story, key` — one row per role-conflict story, describing the two competing roles, their triggering expectation/situation/obligation level, the synthesized story, and a unique row key.
+`Code1, Role1, Expectation_No1, Expectation1, Urgency1, Situation1, Code2, Role2, Expectation_No2, Expectation2, Urgency2, Situation2, Story, key` — one row per role-conflict story, describing the two competing roles, their triggering expectation/situation/urgency level, the synthesized story, and a unique row key.
 
 ### Role taxonomy (`attribution/role.csv`)
 65 roles across 5 domains: `family`, `occupation`, `interpersonal`, `religion`, `society`. Each role has a `Code` (e.g. `F02` for father), a `Domain`, and optional `Gender`/`Status` attributes used to control role-pairing (e.g. avoiding gender-mismatched pairs).

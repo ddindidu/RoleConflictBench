@@ -3,8 +3,6 @@ import pandas as pd
 import glob
 import os
 
-df_compare = None
-
 models = ['gpt-4.1']
 for model_name in models:
     # Construct the path to the directory containing the .jsonl files
@@ -28,12 +26,12 @@ for model_name in models:
 
         code1 = df_temp.loc[0, 'Code1']
         code2 = df_temp.loc[0, 'Code2']
-        obg1 = df_temp.loc[0, 'Obligation1']
-        obg2 = df_temp.loc[0, 'Obligation2']
+        urg1 = df_temp.loc[0, 'Urgency1']
+        urg2 = df_temp.loc[0, 'Urgency2']
         exp1 = df_temp.loc[0, 'Expectation_No1']
         exp2 = df_temp.loc[0, 'Expectation_No2']
 
-        df_temp.loc[0, 'key'] = f"{code1}-{code2}_{obg1}-{obg2}_{exp1}-{exp2}"
+        df_temp.loc[0, 'key'] = f"{code1}-{code2}_{urg1}-{urg2}_{exp1}-{exp2}"
         
         concat_df = pd.concat([concat_df, df_temp], ignore_index=True) if 'concat_df' in locals() else df_temp
 

@@ -47,12 +47,9 @@ class Role:
         """
         return self.df['Domain'].unique().tolist()
 
-    def get_domains(self, domain=True, gender=False, status=True):
-        # domain
+    def get_domain_counts(self, domain=True, gender=False, status=True):
         unique_domain = self.df['Domain'].unique()
-        # status in professional
         unique_status = self.df['Status'].unique()
-        print(unique_status)
         unique_gender = self.df['Gender'].unique()
 
         if (domain == True) and (gender == False) and (status == False):
@@ -97,13 +94,11 @@ class Role:
     
     def are_same_gender(self, role1: str, role2: str) -> bool:
         """
-        Check if two roles are of the same
+        Check if two roles are of the same gender.
         """
         role1_gender = self.get_role_info(role1)['Gender']
         role2_gender = self.get_role_info(role2)['Gender']
 
-        # if role1_gender is None and role2_gender is None:
-        #     return True
         if role1_gender is None or role2_gender is None:
             return True
         elif role1_gender == 'neutral' or role2_gender == 'neutral':
@@ -111,7 +106,6 @@ class Role:
         elif role1_gender == role2_gender:
             return True
         else:
-            #print(role1_gender, role2_gender)
             return False
 
 
@@ -178,12 +172,7 @@ def get_args():
     return parser.parse_args()
 
 if __name__ == "__main__":
-    import os
-    
     args = get_args()
-
-    # Add the parent directory to the system path
-    # sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
     role_instance = Role(args)
 
@@ -193,7 +182,7 @@ if __name__ == "__main__":
     df_family = role_instance.get_role_data('family')
     print(df_family)
 
-    df_prof = role_instance.get_role_data('professional')
-    print(df_prof)
+    df_occupation = role_instance.get_role_data('occupation')
+    print(df_occupation)
 
     print(role_instance.are_same_gender('mother', 'father'))

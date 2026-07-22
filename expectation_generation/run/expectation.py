@@ -11,13 +11,13 @@ from openai import OpenAI
 
 
 SYSTEM_PROMPT = """1. Describe 10 situations that might happen daily in a given role.
-2. You should describe 10 situations with their obligation scores, indicating the degree to which they must be kept or the level of urgency that must be addressed immediately.
-3. The obligation score should be among {1, 2, 3}. 1: low level of obligation, 2: middle level of obligation, 3: high level of obligation.
-4. The distribution of obligation scores should be uniform.
+2. You should describe 10 situations with their urgency scores, indicating the degree to which they must be kept or the level of urgency that must be addressed immediately.
+3. The urgency score should be among {1, 2, 3}. 1: low level of urgency, 2: middle level of urgency, 3: high level of urgency.
+4. The distribution of urgency scores should be uniform.
 5. The output format should be in JSON format.
-{"expectation": situation 1, "obligation": obligation 1}
-{"expectation": situation 2, "obligation": obligation 2}
-{"expectation": situation 3, "obligation": obligation 3}
+{"expectation": situation 1, "urgency": urgency 1}
+{"expectation": situation 2, "urgency": urgency 2}
+{"expectation": situation 3, "urgency": urgency 3}
 ...
 """
 
@@ -28,9 +28,7 @@ class Expectation:
     def __init__(self, args, df_role):
         self.args = args
         self.df_role = df_role
-        self.expectation_list = dict()
-        self.expectation_by_obligation = dict()
-        self.df_expectation = pd.DataFrame(columns=['Code', 'Role', 'Expectation_No', 'Expectation', 'Obligation', 'Situation'])
+        self.df_expectation = pd.DataFrame(columns=['Code', 'Role', 'Expectation_No', 'Expectation', 'Urgency', 'Situation'])
        
         # Temperature and API key for the expectation generator 
         # Load configuration from the config file
@@ -60,16 +58,13 @@ class Expectation:
         for _, row in self.df_role.iterrows():
             role_code = row['Code']
             role = row['Role']
-        
+
             # call the expectation file if it exists
             if self.load_expectation(role_code, role):
-                # print(f"Expectation for {role_code} ({role}) already exists. Load the data.")
                 continue
             else:
                 # if not, report and skip
                 print(f"Expectation for {role_code} ({role}) does not exist. Please generate it first.")
-                
-            
 
 
     def load_expectation(self, code, role):
@@ -77,31 +72,27 @@ class Expectation:
         path = os.path.join(self.output_dir, self.output_file.format(code=code, name=role))
 
         if os.path.exists(path):
-            # temp = []
             with open(path, mode='r') as f:
                 for exp_idx, expectation_line in enumerate(f):
                     d = json.loads(expectation_line)
-                    # temp.append(d)
-                    self.df_expectation= pd.concat(
-                        [self.df_expectation, 
+                    self.df_expectation = pd.concat(
+                        [self.df_expectation,
                          pd.DataFrame([{
                             'Code': code,
                             'Role': role,
                             'Expectation_No': exp_idx,
                             'Expectation': d['expectation'],
-                            'Obligation': d['obligation'],
+                            'Urgency': d['urgency'],
                             'Situation': d['situation']
-                        }])], 
+                        }])],
                         ignore_index=True, axis=0
                         )
 
-                f.close()
-            
             return True
 
         else:
-            return False            
-        
+            return False
+
     
     def generate_expectation(self, code, role):
         while True:
@@ -146,45 +137,29 @@ class Expectation:
                     continue
             
 
-    def get_expectation_df(self, code=None, role=None, obligation=None):
+    def get_expectation_df(self, code=None, role=None, urgency=None):
         # default case: return the whole expectation dataframe
-        if code is None and role is None and obligation is None:
+        if code is None and role is None and urgency is None:
             return self.df_expectation
-        
-        # filter by code, role, and obligation
-        ## if role and obligation are provided, return the expectation for that role and obligation
-        if role is not None and obligation is not None:
+
+        # filter by code, role, and urgency
+        ## if role and urgency are provided, return the expectation for that role and urgency
+        if role is not None and urgency is not None:
             return self.df_expectation[
-                (self.df_expectation['Role'] == role) & (self.df_expectation['Obligation'] == obligation)
+                (self.df_expectation['Role'] == role) & (self.df_expectation['Urgency'] == urgency)
             ].reset_index(drop=True)
-        elif code is not None and obligation is not None:
+        elif code is not None and urgency is not None:
             return self.df_expectation[
-                (self.df_expectation['Code'] == code) & (self.df_expectation['Obligation'] == obligation)
+                (self.df_expectation['Code'] == code) & (self.df_expectation['Urgency'] == urgency)
             ].reset_index(drop=True)
 
         # if only code or role is provided, return the expectation for that code or role
         ## if code is provided, return the expectation for that code
-        elif code is not None and role is None and obligation is None:
+        elif code is not None and role is None and urgency is None:
             return self.df_expectation[self.df_expectation['Code'] == code].reset_index(drop=True)
         ## if role is provided, return the expectation for that role
-        elif role is not None and code is None and obligation is None:
+        elif role is not None and code is None and urgency is None:
             return self.df_expectation[self.df_expectation['Role'] == role].reset_index(drop=True)
-        
-        else:
-            raise ValueError(f"Invalid arguments for get_expectation method. Please provide role code or name.\nArguments: code={code}, role={role}, obligation={obligation}")
-               
 
-    def show_expectation(self):
-        """
-        Display the expectations for each role.
-        """
-        for code, expectations in self.expectation_list.items():
-            print(f"{code}: {expectations}")
-            print()
-    
-    def show_expectation_by_obligation(self):
-        """
-        Display the expectations grouped by obligation.
-        """
-        for code, obligations in self.expectation_by_obligation.items():
-            print(f"{code}: {obligations}")
+        else:
+            raise ValueError(f"Invalid arguments for get_expectation method. Please provide role code or name.\nArguments: code={code}, role={role}, urgency={urgency}")

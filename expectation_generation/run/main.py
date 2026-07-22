@@ -6,8 +6,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')
 
 from attribution.role_attribution import Role
 from expectation_generation.run.expectation import Expectation
-# from utils import save_jsonl, match_id
-from keys import get_key
 
 
 def process_jsonl(file_path):
@@ -63,13 +61,8 @@ def make_triplet(args):
 
     # role selection if it is needed
     if args.test:
-        # by index
-        # ind = [0,1,2,]#9,10,11,16,25,26,48,60,61,68,97,98,100,103,108,109,114,116,117]
-        # df_role = df_role.iloc[ind]
-
-        # by code
         codes = ['F02', 'F08', 'I08', 'O31', 'O67', 'R03']
-        df_role = df_role[df_role['Code'].isin(codes)]    
+        df_role = df_role[df_role['Code'].isin(codes)]
 
     # if jsonl file has wrong format, process it again
     for _, row in df_role.iterrows():
@@ -86,26 +79,15 @@ def make_triplet(args):
                 process_jsonl(path)
 
     expectation_util = Expectation(args, df_role)   # load or generate expectations
-    # expectation_util.show_expectation()
-    # expectation_util.show_expectation_by_obligation()
-    # print(expectation_util.get_expectation_df())
 
     return expectation_util
 
 
-
-
-
-
-
-
-
 def get_args():
     parser = argparse.ArgumentParser()
-    
+
     # base directory ('./') is the root directory of the project
     parser.add_argument("--attribution_dir", type=str, default='./attribution')
-    # parser.add_argument("--scenario_prompt_dir", type=str, default='./prompt')
     parser.add_argument("--expectation_output_dir", type=str, default='./output/')
     parser.add_argument('--expectation_output_file', type=str, default='{code}_{name}.jsonl')
 
@@ -127,7 +109,4 @@ def get_args():
 
 def main(args):
     make_triplet(args)
-    
-    # make_scenario(args)
-
 

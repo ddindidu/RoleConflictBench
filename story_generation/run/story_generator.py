@@ -39,8 +39,7 @@ class StoryGenerator:
         self.api_key = get_key(self.model_name, self.key_num) 
 
         self.generative_client = self.get_generative_model(self.model_full_name)
-    
-        # 
+
         self.df_story = None
         self.list_story = []
         self.scenario_output_dir = os.path.join(self.args.scenario_output_dir, self.model_name)
@@ -61,43 +60,31 @@ class StoryGenerator:
             for comb1, comb2 in combinations(role_tuple, 2)
             if self.is_valid_role_combination(role_util, comb1[1], comb2[1])
         ]
-        # for combination in role_combination_list:
-        #     print(combination, end='\t')
         print(f"n(role): {len(role)},\t n(role_combination): {len(role_combination_list)}")
-        #exit(1)
 
         for combination in tqdm(role_combination_list, desc="Role combinations"):
             comb1, comb2 = combination
             code1, role1 = comb1
             code2, role2 = comb2
-            
-            for obg1 in range(1,4):
-                for obg2 in range(1,4):
-                    temp_scenario = self.load_scenario(code1, code2, obg1, obg2)
+
+            for urg1 in range(1,4):
+                for urg2 in range(1,4):
+                    temp_scenario = self.load_scenario(code1, code2, urg1, urg2)
 
                     if temp_scenario is None:
                         # if scenario file does not exist, sample expectations and generate a new scenario
-                        temp_scenario = self.sample_expectations(expectation_util, code1, code2, obg1, obg2)
+                        temp_scenario = self.sample_expectations(expectation_util, code1, code2, urg1, urg2)
 
                         if temp_scenario is None:
-                            print(f"No expectations found for {code1} ({role1}) and {code2} ({role2}) with obligations {obg1} and {obg2}. Skipping...")
+                            print(f"No expectations found for {code1} ({role1}) and {code2} ({role2}) with urgency levels {urg1} and {urg2}. Skipping...")
                             continue
                         else:
                             # save the scenario
                             self.save_scenario(temp_scenario)
-                    
+
                     # update the story list
                     self.list_story.append(temp_scenario)
-                    # self.update_story_df(temp_scenario)
-                        
-                    # if self.args.test:
-                    #     break
-                        
-                    # check    
-                    # break
-                # check
-                # break
-        
+
         # convert the list of stories to a DataFrame
         self.df_story = pd.DataFrame(self.list_story)
         print(self.df_story.head())
@@ -107,15 +94,6 @@ class StoryGenerator:
     ### Customize Your Role Combination Logic ###
     def is_valid_role_combination(self, role_util, role1, role2):
         # Check if the roles are not the same domain
-        ## Intra-domain comparison for Occupation domain
-        # if role_util.are_same_domain(role1, role2) and role_util.get_role_info(role1)['Domain'] == 'occupation':
-        #     if role_util.are_same_status(role1, role2):
-        #         return False    # if they are in the same domain (occupation) and have the same status, return False
-        #     else:
-        #         return True     # if they are in the same domain (occupation) but have different status, return True
-        # elif role_util.are_same_domain(role1, role2):
-        #     return False        # if they are in the same domain, return False
-        ## No intra-domain comparison
         if role_util.are_same_domain(role1, role2):
             return False        # if they are in the same domain, return False
         
@@ -126,12 +104,12 @@ class StoryGenerator:
         return True
 
     
-    def load_scenario(self, code1, code2, obg1, obg2):
+    def load_scenario(self, code1, code2, urg1, urg2):
         if code1 > code2:
             code1, code2 = code2, code1  # ensure code1 < code2 for consistency
-            obg1, obg2 = obg2, obg1  # ensure obg1 < obg2 for consistency   
+            urg1, urg2 = urg2, urg1  # ensure urg1 < urg2 for consistency
 
-        filename = f"{code1}-{code2}_{obg1}-{obg2}_*-*.json"
+        filename = f"{code1}-{code2}_{urg1}-{urg2}_*-*.json"
 
         filepath = os.path.join(self.scenario_output_dir, f"{code1[0]}-{code2[0]}", filename)   # divide by first character of code for reducing loading time
         file_list = glob.glob(filepath)
@@ -155,51 +133,38 @@ class StoryGenerator:
         code2 = data['Code2']
         exp_id1 = data['Expectation_No1']
         exp_id2 = data['Expectation_No2']
-        obg1 = data['Obligation1']
-        obg2 = data['Obligation2']
-        
+        urg1 = data['Urgency1']
+        urg2 = data['Urgency2']
+
         file_dir = os.path.join(self.scenario_output_dir, f"{code1[0]}-{code2[0]}")   # divide by first character of code for reducing loading time
         os.makedirs(file_dir, exist_ok=True)
-        filename = f"{code1}-{code2}_{obg1}-{obg2}_{exp_id1}-{exp_id2}.json"
+        filename = f"{code1}-{code2}_{urg1}-{urg2}_{exp_id1}-{exp_id2}.json"
         filepath = os.path.join(file_dir, filename)
 
         with open(filepath, 'w') as f:
             json.dump(data, f)
-            f.close()
             print(f"Saved scenario to {filepath}")
 
 
-    # def update_story_df(self, data):
-    #     # update the story
-    #     self.list_story.append(data)
-
-    
-    def sample_expectations(self, expectation_util, code1, code2, obg1, obg2):
+    def sample_expectations(self, expectation_util, code1, code2, urg1, urg2):
         if code1 > code2:
             code1, code2 = code2, code1  # ensure code1 < code2 for consistency
-            obg1, obg2 = obg2, obg1  # ensure obg1 < obg2 for consistency   
+            urg1, urg2 = urg2, urg1  # ensure urg1 < urg2 for consistency
 
-        df_expectation1 = expectation_util.get_expectation_df(code=code1, obligation=obg1)
-        df_expectation2 = expectation_util.get_expectation_df(code=code2, obligation=obg2)
-        
+        df_expectation1 = expectation_util.get_expectation_df(code=code1, urgency=urg1)
+        df_expectation2 = expectation_util.get_expectation_df(code=code2, urgency=urg2)
+
         if df_expectation1.empty or df_expectation2.empty:
             return None
-        
+
         # sample expectations
         exp1 = df_expectation1.sample(1).iloc[0]
         exp2 = df_expectation2.sample(1).iloc[0]
-
-
 
         # create a role conflict story
         system_prompt = SYSTEM_PROMPT.format(role1=exp1['Role'], role2=exp2['Role'])
         user_prompt = USER_PROMPT.format(role1=exp1['Role'], expectation1=exp1['Expectation'], situation1=exp1['Situation'],
                                          role2=exp2['Role'], expectation2=exp2['Expectation'], situation2=exp2['Situation'])
-        # test
-        # print(f"Generating story for {code1} and {code2}...")
-        # print("System Prompt:\n", system_prompt)
-        # print("User Prompt:\n", user_prompt)
-        # exit(1)
 
         if self.temperature == 0:
             text = self.generate_story(system_prompt, user_prompt)
@@ -215,15 +180,15 @@ class StoryGenerator:
             "Role1": exp1['Role'],
             "Expectation_No1": exp1['Expectation_No'],
             "Expectation1": exp1['Expectation'],
-            "Obligation1": exp1['Obligation'],
+            "Urgency1": exp1['Urgency'],
             "Situation1": exp1['Situation'],
             "Code2": code2,
             "Role2": exp2['Role'],
             "Expectation_No2": exp2['Expectation_No'],
             "Expectation2": exp2['Expectation'],
-            "Obligation2": exp2['Obligation'],
+            "Urgency2": exp2['Urgency'],
             "Situation2": exp2['Situation'],
-            "Story": text 
+            "Story": text
         }
 
     def get_story_df(self):
@@ -258,8 +223,6 @@ class StoryGenerator:
         :param user_prompt: The user prompt for the model.
         :return: Generated text from the model.
         """
-        # print(f"Generating scenario with {self.model_name}...")
-        
         if 'gpt' in self.model_name:
             text = gpt.generate(self.generative_client, self.model_full_name, system_prompt, user_prompt, self.temperature)
         else:

@@ -39,7 +39,6 @@ def get_system_prompt(preliminary):
         return PRELIMINARY_SYSTEM_PROMPT
     else:
         return SYSTEM_PROMPT
-    # " Read the given context and question, and choose the best option among (A) and (B). Respond with a single alphabet."   # value 에 관한 답 하라는 프롬트 추가하자
 
 
 def get_question_prompt(preliminary, role1, role2, story):

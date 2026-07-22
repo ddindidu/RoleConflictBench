@@ -3,14 +3,11 @@ from keys import get_key
 from evaluation.model import gpt, claude, gemini, qwen3, gpt_oss, qwen_openrouter, olmo_openrouter
 
 class Evaluatee:
-    def __init__(self, args): # expectation_util=None, story_util=None):
+    def __init__(self, args):
         self.args = args
         self.model_name = args.evaluatee_model
         self.preliminary = args.preliminary
         self.speaker = args.speaker
-
-        # self.expectation_util = expectation_util
-        # self.story_util = story_util
 
         self.evaluation_dir = args.evaluation_dir
         self.evaluation_output_dir = os.path.join(args.evaluation_output_dir, self.model_name)
@@ -103,21 +100,21 @@ class Evaluatee:
         return text
 
     
-    def exists(self, code1, code2, obg1, obg2, exp_id1, exp_id2):
+    def exists(self, code1, code2, urg1, urg2, exp_id1, exp_id2):
         if self.preliminary:
             filename = f"{code1}-{code2}.json"
         else:
-            filename = f"{code1}-{code2}_{obg1}-{obg2}_{exp_id1}-{exp_id2}.json"
+            filename = f"{code1}-{code2}_{urg1}-{urg2}_{exp_id1}-{exp_id2}.json"
         filepath = os.path.join(self.evaluation_output_dir, f"{code1[0]}-{code2[0]}", filename)
         return os.path.exists(filepath) or os.path.exists(filepath.replace('.json', '.jsonl'))  # json or jsonl
 
 
-    def save_response(self, code1, code2, obg1, obg2, exp_id1, exp_id2, response_dict, options, raw_response):
+    def save_response(self, code1, code2, urg1, urg2, exp_id1, exp_id2, response_dict, options, raw_response):
         save_dir = os.path.join(self.evaluation_output_dir, f"{code1[0]}-{code2[0]}")
         if self.preliminary:
             save_file = f"{code1}-{code2}.json"
         else:
-            save_file = f"{code1}-{code2}_{obg1}-{obg2}_{exp_id1}-{exp_id2}.json"
+            save_file = f"{code1}-{code2}_{urg1}-{urg2}_{exp_id1}-{exp_id2}.json"
         os.makedirs(save_dir, exist_ok=True)
         save_path = os.path.join(save_dir, save_file)
 
